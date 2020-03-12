@@ -109,6 +109,7 @@ export default {
         line-height: 48px;
         color: #fff;
         letter-spacing: 2px;
+        cursor: pointer;
       }
     }
   }
@@ -128,6 +129,7 @@ export default {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
+        cursor: pointer;
     }
 }
 </style>
