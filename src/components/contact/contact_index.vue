@@ -1,5 +1,6 @@
 <template>
   <div id="contact-index">
+    <heard class="heard1"></heard>
     <div class="img">
       <img src="@/assets/images/contact/header.png" alt="">
       <p>包图家居全球门店请联系我们</p>
@@ -23,7 +24,11 @@
 </template>
 
 <script>
+import heard from "@/components/public/heard";
 export default {
+  components:{
+    heard
+  },
   data() {
     return {
       contactList: [
@@ -85,6 +90,11 @@ export default {
 #contact-index {
   width: 100%;
 }
+.heard1 {
+    position: absolute;
+    top: 30px;
+    z-index: 1;
+  }
 .img {
   width: 100%;
   height: 640px;

@@ -1,5 +1,6 @@
 <template>
   <div id="team_index">
+    <heard class="heard1"></heard>
     <div class="img">
       <img src="@/assets/images/contact/header.png" alt>
       <p>一对一设计师专属服务</p>
@@ -28,7 +29,11 @@
 </template>
 
 <script>
+import heard from "@/components/public/heard";
 export default {
+  components:{
+    heard
+  },
   data() {
     return {
       teamList: [
@@ -107,7 +112,13 @@ export default {
 <style lang="scss" scoped>
 #team_index {
   width: 100%;
+  position: relative;
 }
+.heard1 {
+    position: absolute;
+    top: 30px;
+    z-index: 1;
+  }
 .img {
   width: 100%;
   height: 640px;

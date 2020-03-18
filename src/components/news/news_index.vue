@@ -1,10 +1,11 @@
 <template>
   <div id="news-index">
+    <heard class="heard1"></heard>
     <div class="heard"></div>
     <div class="main">
       <div class="news-box" v-for="(item,index) in newsList" :key="index">
         <div class="news-left">
-          <img :src="item.img" alt>
+          <img :src="item.img" alt />
         </div>
         <div class="news-right">
           <p>{{item.title}}</p>
@@ -14,13 +15,17 @@
       </div>
     </div>
     <div class="bottom">
-        <div class="bottom-btn">加载更多</div>
+      <div class="bottom-btn">加载更多</div>
     </div>
   </div>
 </template>
 
 <script>
+import heard from "@/components/public/heard";
 export default {
+  components: {
+    heard
+  },
   data() {
     return {
       newsList: [
@@ -64,11 +69,16 @@ export default {
 #news-index {
   width: 100%;
 }
+.heard1 {
+    position: absolute;
+    top: 30px;
+  }
 .heard {
   width: 100%;
   height: 200px;
   background: skyblue;
   margin-bottom: 100px;
+  
 }
 .main {
   width: 100%;
@@ -114,23 +124,23 @@ export default {
     }
   }
 }
-.bottom{
-    width: 100%;
+.bottom {
+  width: 100%;
+  height: 48px;
+  margin-bottom: 55px;
+  position: relative;
+  .bottom-btn {
+    width: 160px;
     height: 48px;
-    margin-bottom: 55px;
-    position: relative;
-    .bottom-btn{
-        width: 160px;
-        height: 48px;
-        background: skyblue;
-        color: #fff;
-        text-align: center;
-        line-height: 49px;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        cursor: pointer;
-    }
+    background: skyblue;
+    color: #fff;
+    text-align: center;
+    line-height: 49px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+  }
 }
 </style>
 

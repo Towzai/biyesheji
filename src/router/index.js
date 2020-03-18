@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+import home from '@/components/home/home_index'
 import contact from '@/components/contact/contact_index'
 import news from '@/components/news/news_index'
 import team from '@/components/team/team_index'
@@ -11,8 +11,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      name: 'home',
+      component: home
     },
     {
       path: '/contact',
