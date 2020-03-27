@@ -74,7 +74,7 @@ export default {
 }
 .heard1 {
     position: absolute;
-    top: 30px;
+    top: 80px;
   }
 .heard {
   width: 100%;

@@ -119,7 +119,7 @@ export default {
 }
 .heard1 {
     position: absolute;
-    top: 30px;
+    top: 80px;
     z-index: 1;
   }
 .img {
