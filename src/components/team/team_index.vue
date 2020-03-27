@@ -25,14 +25,17 @@
         </div>
       </div>
     </div>
+    <foot></foot>
   </div>
 </template>
 
 <script>
 import heard from "@/components/public/heard";
+import foot from "@/components/public/footer";
 export default {
   components:{
-    heard
+    heard,
+    foot
   },
   data() {
     return {
@@ -126,6 +129,7 @@ export default {
   position: relative;
   > img {
     width: 100%;
+    height: 100%;
   }
   > p {
     font-size: 60px;

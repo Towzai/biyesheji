@@ -20,14 +20,17 @@
         </div>
       </div>
     </div>
+    <foot></foot>
   </div>
 </template>
 
 <script>
 import heard from "@/components/public/heard";
+import foot from "@/components/public/footer";
 export default {
   components:{
-    heard
+    heard,
+    foot
   },
   data() {
     return {
@@ -89,7 +92,9 @@ export default {
 <style lang="scss" scoped>
 #contact-index {
   width: 100%;
+  position: relative;
 }
+
 .heard1 {
     position: absolute;
     top: 30px;
@@ -100,7 +105,13 @@ export default {
   height: 640px;
   line-height: 640px;
   position: relative;
+  > img{
+    width: 100%;
+    height: 100%;
+  }
   > p {
+    text-align: center;
+    width: 100%;
     font-size: 60px;
     letter-spacing: 10px;
     color: #fff;

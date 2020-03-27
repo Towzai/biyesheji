@@ -95,8 +95,9 @@ export default {
           font-size: 20px;
           text-align: center;
           margin: 0 10px;
-          font-family: 优设标题黑;
-          text-shadow: black 1px 1px 15px;
+          font-family: 思源黑体;
+          font-weight: 600;
+          text-shadow: rgba(0,0,0,.5) 1px 1px 15px;
           cursor: pointer;
           &:hover {
             color: #f1c92f;

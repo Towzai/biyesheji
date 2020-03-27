@@ -17,14 +17,17 @@
     <div class="bottom">
       <div class="bottom-btn">加载更多</div>
     </div>
+    <foot></foot>
   </div>
 </template>
 
 <script>
 import heard from "@/components/public/heard";
+import foot from "@/components/public/footer";
 export default {
   components: {
-    heard
+    heard,
+    foot
   },
   data() {
     return {
