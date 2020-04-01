@@ -5,7 +5,7 @@
       <img src="@/assets/images/contact/header.png" alt="">
       <p>包图家居全球门店请联系我们</p>
     </div>
-    <div class="main">
+    <div class="main animated fadeInUp">
       <div class="contact-box">
         <div class="contact" v-for="(item,index) in contactList" :key="index">
           <div class="contact-top">

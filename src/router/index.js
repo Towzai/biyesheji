@@ -8,6 +8,11 @@ import about from '@/components/about/about_index'
 import project from '@/components/project/project_index'
 import product from '@/components/product/product_index'
 
+const originalPush = Router.prototype.push
+Router.prototype.push = function push(location) {
+  return originalPush.call(this, location).catch(err => err)
+}
+
 Vue.use(Router)
 
 export default new Router({

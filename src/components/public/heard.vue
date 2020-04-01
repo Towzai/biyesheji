@@ -7,7 +7,8 @@
           <li
             v-for="(item,index) in list"
             :key="index"
-            @click.stop="onClickJump(item.url)"
+            @click.stop="onClickJump(item.url,item.id)"
+            :class="{active:isNum == item.id}"
           >{{item.name}}</li>
         </ul>
       </div>
@@ -21,6 +22,7 @@
 export default {
   data() {
     return {
+      isNum: this.$route.query.isActive || 1,
       list: [
         {
           id: 1,
@@ -61,12 +63,15 @@ export default {
     };
   },
   methods: {
-    onClickJump(url) {
+    onClickJump(url, id) {
       this.$router.push({
-        path: url
+        path: url,
+        query: {
+          isActive: id
+        }
       });
     }
-  }
+  },
 };
 </script>
 <style lang="scss" scoped>
@@ -97,9 +102,13 @@ export default {
           margin: 0 10px;
           font-family: 思源黑体;
           font-weight: 600;
-          text-shadow: rgba(0,0,0,.5) 1px 1px 15px;
+          text-shadow: rgba(0, 0, 0, 0.5) 1px 1px 15px;
           cursor: pointer;
           &:hover {
+            color: #f1c92f;
+            transition: all .4s;
+          }
+          &.active{
             color: #f1c92f;
           }
         }
@@ -107,7 +116,7 @@ export default {
     }
     > a {
       line-height: 33px;
-      >i{
+      > i {
         color: #fafafa;
         text-shadow: black 1px 1px 10px;
       }

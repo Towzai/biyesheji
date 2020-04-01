@@ -9,7 +9,7 @@
       </div>
       <img src="../../assets/images/home/header.png" alt />
     </div>
-    <div class="project-box">
+    <div class="project-box animated" :class="{fadeInUp:show}" v-show="show">
       <div class="project-top">
         <div class="left">
           <img src="@/assets/images/home/project1.png" />
@@ -49,7 +49,7 @@
         </div>
       </div>
     </div>
-    <div class="show-box">
+    <div class="show-box" :class="{full:!show}">
       <div class="show-button">
         <button @click="right">&gt;</button>
         <button @click="left">&lt;</button>
@@ -96,6 +96,7 @@ export default {
   },
   data() {
     return {
+      show: false,
       list: [
         {
           id: 1,
@@ -132,7 +133,22 @@ export default {
     left() {
       var star = this.list.shift();
       this.list.push(star);
+    },
+    handleScroll() {
+      let srollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      this.scroll = Math.ceil(srollTop);
+      let that = this;
+      setTimeout(() => {
+        console.log(that.scroll)
+        if (that.scroll > 100) {
+          this.show = true;
+        }
+      },200);
     }
+  },
+  mounted() {
+    window.addEventListener("scroll", this.handleScroll, true);
   }
 };
 </script>
@@ -309,6 +325,9 @@ export default {
   display: flex;
   margin: 0 auto;
   margin-bottom: 80px;
+  &.full{
+    margin-top:600px ;
+  }
   .show-button {
     width: 186px;
     display: flex;

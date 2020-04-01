@@ -5,7 +5,7 @@
       <img src="@/assets/images/contact/header.png" alt>
       <p>一对一设计师专属服务</p>
     </div>
-    <div class="main">
+    <div class="main animated fadeInUp">
       <div class="team-box">
         <div class="team" v-for="(item,index) in teamList" :key="index">
           <div class="team-left">

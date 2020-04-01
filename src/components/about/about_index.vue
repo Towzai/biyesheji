@@ -5,7 +5,7 @@
       <img src="@/assets/images/about/header.png" alt />
       <p>为大众创造更加美好的日常生活</p>
     </div>
-    <div class="profile-box">
+    <div class="profile-box animated fadeInUp">
       <div class="top">
         <p>COMPANY PROFILE</p>
         <p>公司简介</p>
@@ -32,7 +32,7 @@
         </p>
       </div>
     </div>
-    <div class="path-box">
+    <div class="path-box animated fadeInUp">
       <div class="path-top">
         <p>DEVELOPMENT PATH</p>
         <p>发展历程</p>
@@ -93,7 +93,11 @@ export default {
   components: {
     heard,
     foot
-  }
+  },
+  data() {
+    return {};
+  },
+  methods: {},
 };
 </script>
 <style lang="scss" scoped>

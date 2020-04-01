@@ -2,7 +2,7 @@
   <div class="project-index">
     <heard class="heard1"></heard>
     <div class="heard"></div>
-    <div class="project-box">
+    <div class="project-box  animated fadeInUp">
       <div class="project-top">
         <div class="left">
           <img src="@/assets/images/home/project1.png" />

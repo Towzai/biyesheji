@@ -14,3 +14,6 @@ new Vue({
   components: { App },
   template: '<App/>'
 })
+
+import animated from 'animate.css'
+Vue.use(animated);

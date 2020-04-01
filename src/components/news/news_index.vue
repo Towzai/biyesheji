@@ -2,7 +2,7 @@
   <div id="news-index">
     <heard class="heard1"></heard>
     <div class="heard"></div>
-    <div class="main">
+    <div class="main animated fadeInUp">
       <div class="news-box" v-for="(item,index) in newsList" :key="index">
         <div class="news-left">
           <img :src="item.img" alt />

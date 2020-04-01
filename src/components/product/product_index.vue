@@ -2,7 +2,7 @@
   <div class="product-index">
     <heard class="heard1"></heard>
     <div class="heard"></div>
-    <div class="icon-main">
+    <div class="icon-main animated fadeInUp">
       <div class="icon-box">
         <div class="icon">
           <img src="~@/assets/images/product/deng.png" alt />
@@ -60,7 +60,7 @@
         <p>家中照明不仅方便实用还会影响到心情。</p>
       </div>
     </div>
-    <div class="photo-box">
+    <div class="photo-box animated fadeInUp">
       <div class="photo">
         <img src="~@/assets/images/product/woshi.png" alt />
         <p>卧室专区</p>
